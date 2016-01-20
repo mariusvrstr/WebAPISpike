@@ -1,5 +1,5 @@
 ﻿
-namespace Spike.API.Areas.Sample.Controllers
+namespace Spike.Web.Areas.Sample.Controllers
 {
     using System.Collections.Generic;
     using System.Web.Http;

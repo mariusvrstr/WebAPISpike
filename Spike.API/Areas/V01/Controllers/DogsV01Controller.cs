@@ -1,5 +1,5 @@
 ﻿
-namespace Spike.API.Areas.V01.Controllers
+namespace Spike.Web.Areas.V01.Controllers
 {
     using System.Collections.Generic;
     using System.Linq;
@@ -35,13 +35,24 @@ namespace Spike.API.Areas.V01.Controllers
         /// <summary>
         /// Gets all the available dogs
         /// </summary>
+        /// <param name="name">The name.</param>
+        /// <param name="breed">The breed.</param>
         /// <returns>Dogs</returns>
         [HttpGet]
         [Route("")]
-        public ResponseList<Dog> Get()
+        public ResponseList<Dog> Get( // Hide complexity behind ? with optional parms
+            string name = null, 
+            string breed = null) 
         {
             var adapter = new DogAdapterStub();
-            var dogs = adapter.GetAllDogs();
+
+            var filters = new DogsFilter
+            {
+                Name = name,
+                Breed = breed
+            };
+
+            var dogs = adapter.GetAllDogs(filters);
 
             return new ResponseList<Dog>(ResultCodeEnum.Success)
             {

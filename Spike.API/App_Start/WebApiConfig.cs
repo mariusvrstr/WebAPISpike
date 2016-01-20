@@ -1,5 +1,5 @@
 ﻿
-namespace Spike.API
+namespace Spike.Web
 {
     using System.Web.Http;
     using Newtonsoft.Json;
@@ -9,16 +9,16 @@ namespace Spike.API
     {
         public static void Register(HttpConfiguration config)
         {
-            // var formatters = GlobalConfiguration.Configuration.Formatters;
+             var formatters = GlobalConfiguration.Configuration.Formatters;
 
-            // Forces browser to return JSON
-            // formatters.Remove(formatters.XmlFormatter);
+             // Forces browser to return JSON
+             formatters.Remove(formatters.XmlFormatter);
 
-            // var jsonFormatter = formatters.JsonFormatter;
+             var jsonFormatter = formatters.JsonFormatter;
 
-            // var settings = jsonFormatter.SerializerSettings;
-            //settings.Formatting = Formatting.Indented;
-            //settings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+             var settings = jsonFormatter.SerializerSettings;
+            settings.Formatting = Formatting.Indented;
+            settings.ContractResolver = new CamelCasePropertyNamesContractResolver();
 
             config.MapHttpAttributeRoutes();
 

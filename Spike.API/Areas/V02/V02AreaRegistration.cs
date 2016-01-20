@@ -1,5 +1,5 @@
 ﻿
-namespace Spike.API.Areas.V02
+namespace Spike.Web.Areas.V02
 {
     using System.Web.Mvc;
 

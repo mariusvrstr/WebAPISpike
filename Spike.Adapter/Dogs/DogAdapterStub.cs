@@ -11,10 +11,18 @@ namespace Spike.AdapterStub.Dogs
         /// <summary>
         /// Gets all dogs.
         /// </summary>
+        /// <param name="filters">The filters.</param>
         /// <returns>All the dogs</returns>
-        public IEnumerable<Dog> GetAllDogs()
+        public IEnumerable<Dog> GetAllDogs(DogsFilter filters = null)
         {
-            return Storage.Instance.Dogs;
+            if (filters == null)
+            {
+                return Storage.Instance.Dogs;
+            }
+
+            return Storage.Instance.Dogs
+                    .FilterName(filters.Name)
+                    .FilterBreed(filters.Breed);
         }
 
         /// <summary>

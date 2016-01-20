@@ -1,5 +1,5 @@
 ﻿
-namespace Spike.API
+namespace Spike.Web
 {
     using System;
     using System.Web;

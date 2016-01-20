@@ -5,9 +5,7 @@ Prerequisites
 
 Roadmap
 ================================================
-1. Add API Help Page (Swaggger)
-2. Add/hide additional parameters behind ?
-3. Add simular service in Web Services
-4. Add proper error handling (Tokenization + HTTP Response Codes)
+1. Add simular service in Web Services
+2. Add proper error handling (Tokenization + HTTP Response Codes)
 
 
