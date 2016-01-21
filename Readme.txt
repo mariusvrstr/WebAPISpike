@@ -4,6 +4,5 @@ Prerequisites
 
 
 Roadmap
-================================================
-1. Add proper error handling (Tokenization + HTTP Response Codes)
-2. Consumers & Connection Handlers
+==================================================================
+1. Web Service / Web API Consumers & Connection Handlers
