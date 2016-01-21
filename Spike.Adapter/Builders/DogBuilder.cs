@@ -55,6 +55,13 @@ namespace Spike.AdapterStub.Builders
             return Pluto();
         }
 
+        public DogBuilder UpdateName(string name)
+        {
+            this.Name = name;
+
+            return this;
+        }
+
         public Dog Build()
         {
             return new Dog

@@ -5,7 +5,5 @@ Prerequisites
 
 Roadmap
 ================================================
-1. Add simular service in Web Services
-2. Add proper error handling (Tokenization + HTTP Response Codes)
-
-
+1. Add proper error handling (Tokenization + HTTP Response Codes)
+2. Consumers & Connection Handlers
