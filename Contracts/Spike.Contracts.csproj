@@ -45,6 +45,7 @@
     <Compile Include="Dogs\DogsFilter.cs" />
     <Compile Include="Dogs\IDogAdapter.cs" />
     <Compile Include="Exceptions\BadRequestException.cs" />
+    <Compile Include="Exceptions\MethodNotSupported.cs" />
     <Compile Include="Exceptions\NotFoundException.cs" />
     <Compile Include="Exceptions\UnAuthorizedException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

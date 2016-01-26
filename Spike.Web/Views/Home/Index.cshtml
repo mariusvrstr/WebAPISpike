@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Scripts
+{}
+
+<h2>Web API & Web Services</h2>
+
+<p>
+    This sample site will show you the basic best practices and differences between Web API 2.1 and WCF Web Services.
+</p>
+
+<ul>
+    <li><a href="@(@Model.BaseUrl + @"api/sample/dogs")">Games Web API V01</a> (Post, Get, Put and Delete)</li>
+    <li>@Html.ActionLink("API Documentation", "Index", "Help", new { area = "HelpPage" }, null) (Automated API Documentation)</li>
+    <li><a href="@(@Model.BaseUrl + @"services/DogService.svc")">Rock Paper WCF Web Service</a> (Normal WCF Service)</li>
+</ul>

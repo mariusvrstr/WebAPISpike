@@ -11,10 +11,19 @@ namespace Spike.Contracts.Response
         [Description("00")]
         Success,
 
-        [Description("01")]
+        [Description("-01")]
+        GeneralFailure,
+
+        [Description("-02")]
         NotFound,
 
-        [Description("-1")]
-        GeneralFailure
+        [Description("-03")]
+        BadRequest,
+
+        [Description("-04")]
+        NotAuthorized,
+
+        [Description("-05")]
+        MethodNotSupported
     }
 }
